@@ -91,7 +91,7 @@ const resetGame = () => {
 
 // イベント
 $btnGo.addEventListener('click', judge);
-$btnReset.addEventListener('click, resetGame');
+$btnReset.addEventListener('click', resetGame);
 
 // Enterキーで判定
 $guess.addEventListener('keydawn', (e) => {
