@@ -34,12 +34,12 @@ renderBest();
 // メッセージ表示ユーティリティ
 const setMessage = (text, type = '') => {
   $msg.textContent = text;
-  $msg.className = '' + (type ? ' ' + type : '');
+  $msg.className = 'message' + (type ? ' ' + type : '');
 };
 
 // 判定処理
 const judge = () => {
-  const raw = $guess.ariaValueMax.trim();
+  const raw = $guess.value.trim();
   const num = Number(raw);
 
   if (!raw || Number.isNaN(num)) {
@@ -94,7 +94,7 @@ $btnGo.addEventListener('click', judge);
 $btnReset.addEventListener('click', resetGame);
 
 // Enterキーで判定
-$guess.addEventListener('keydawn', (e) => {
+$guess.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') judge();
 });
 
