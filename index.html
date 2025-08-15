@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>app03-number-guess</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- https://github.com/ksjs-kntj/あああ.git -->
+  <main class="container">
+    <h1>数当てゲーム 🔢</h1>
+    <p class="desc">1〜100の整数を当てよう！</p>
+
+    <div class="status">
+      <div>試行回数: <span id="tries">0</span></div>
+      <div>ベスト: <span id="best">0</span></div>
+    </div>
+
+    <div class="inputRow">
+      <input id="guess" type="number" min="1" max="100" pattern="1〜100">
+      <button id="btnGuess">判定</button>
+      <button id="btnReset" class="ghost">リセット</button>
+    </div>
+
+    <p id="message" class="message">数字を入力して「判定」を押そう！</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
